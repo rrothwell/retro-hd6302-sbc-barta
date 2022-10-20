@@ -36,13 +36,47 @@ For example: [Bitsavers](http://www.bitsavers.org/components/motorola/6801/MC680
 However this is a scan in the form of a PDF document and not in a form that can be assembled.
 
 An assembly listing can be found at [Vintage Chips](https://vintagechips.wordpress.com/2018/02/04/sbc6303完成間近/) in Japan, 
-as part of a document package for another HD6303-based computer, the sbc6303.
+as part of a document package for another HD6303-based computer, the sbc6303. 
+Seen here in [Japanese](https://vintagechips.wordpress.com/2018/04/26/sbc6303%E3%83%AB%E3%83%BC%E3%82%BA%E3%82%AD%E3%83%83%E3%83%88/) 
+and [English](https://vintagechips-wordpress-com.translate.goog/2018/04/26/sbc6303%E3%83%AB%E3%83%BC%E3%82%BA%E3%82%AD%E3%83%83%E3%83%88/?_x_tr_sl=ja&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp) translation.
+
+![Location of 6303 Docs Japanese](https://user-images.githubusercontent.com/1712402/196881896-4d0dfa65-62da-4f17-b69b-b28a6267cfa2.PNG)
+![Location of 6303 docs](https://user-images.githubusercontent.com/1712402/196881951-6e90a15e-3af9-484c-8cab-a6b3b4c16ed6.PNG)
+
 The document package is also linked to directly from [Seeed Studio](https://www.seeedstudio.com/SBC6303-g-1187477).
 
 An alternate assembly listing (not used) is found on [Github](https://github.com/tgtakaoka/LILbug).
 
 The afrementioned document package includes as assembler output the hex and S-record files. 
 The hex file was used directly to program an EPROM.
+
+## Programming the EPROM
+
+Programming the EPROM is performed using a universal EPROM programmer, the TL866 II plus.
+This is connected to a PC-style disktop computer via USB.
+
+![TL866 II plus](https://user-images.githubusercontent.com/1712402/196881213-45d47329-e129-4361-9dbd-a758afa0381a.JPG)
+
+The associated software is called Xgpro.
+
+![Capture](https://user-images.githubusercontent.com/1712402/196880263-2e86493c-fd71-4a5c-bb9a-af3f78a75ce8.PNG)
+
+The hex file is transferred to a PC-style disktop computer and the contents of the hex file loaded into Xgpro.
+The destination of the hex file content in the computer memory map is recorded in the hex file,
+so that becomes the file starting address for the load.
+The destination address is relative to the address range of the EPROM to be programmed.
+
+![Load Hex](https://user-images.githubusercontent.com/1712402/196880339-18f93887-bd76-4dd6-8275-ce80e24b86d5.PNG)
+
+The successful load can be verified by examining the end of the file buffer 
+and identifying the welcome message and the HD6303 vector block.
+
+![Verify load](https://user-images.githubusercontent.com/1712402/196880715-a665a3f3-613d-4231-9de3-dd3ce38bd14f.PNG)
+
+Programming the EPROM is then straight forward, though disabling the ID check helps.
+
+![Program EPROM](https://user-images.githubusercontent.com/1712402/196881535-38d87346-595c-41d4-b1c4-0fae8291bc74.PNG)
+
 
 ### Initial configuration
 ![IMG_5484 2](https://user-images.githubusercontent.com/1712402/196090757-239bce5f-099a-4dab-af43-f08a50b5a755.jpg)
