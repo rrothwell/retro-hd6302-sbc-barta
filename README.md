@@ -42,9 +42,9 @@ The micromputer to USB dongle pin association is as follows:
 | Rx                    | Tx |
 | Tx                    | Rx |
 
-The monitor assembly code has been has been edited to provide 9600 baud instead of the default 300 baud.
+The monitor assembly code has been edited and reassembled (not by me) to provide 9600 baud by default, instead of the default 300 baud.
 
-On a Macintosh or other unix-like desktop computer the terminal can be used to identify the USB dongle.
+On a Macintosh or other unix-like desktop computer, the terminal can be used to identify the USB dongle.
 
 `
 ls -al /dev/tty*
