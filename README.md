@@ -24,6 +24,26 @@ Power to the board is supplied via the edge connection through a 5V regulated wa
 This is a temporary measure during construction as power during normal operation 
 is derived from the USB-TTL UART configured to provide 5V.
 
+## Monitor
+
+The monitor program originates with Motorola and its called Lilbug. 
+Its quite small and adaptable via additional commands.
+
+Lilbug is loaded into the memory space at $F800 to $FFFF.
+
+The manual is readily findable on the web and it includes the source code.
+For example: [Bitsavers](http://www.bitsavers.org/components/motorola/6801/MC6801RM_AD2_MC6801_Reference_Manual_May84.pdf)
+However this is a scan in the form of a PDF document and not in a form that can be assembled.
+
+An assembly listing can be found at [Vintage Chips](https://vintagechips.wordpress.com/2018/02/04/sbc6303完成間近/) in Japan 
+as part of a document package for another HD6303-based computer, the sbc6303.
+The document package is also linked to directly from [Seeed Studio](https://www.seeedstudio.com/SBC6303-g-1187477).
+
+An alternate assembly listing (not used) is found on [Github](https://github.com/tgtakaoka/LILbug).
+
+The afrementioned documetn package includes as assemler output the hex and S-record files. 
+The hex file was used directly to program an EPROM.
+
 ### Initial configuration
 ![IMG_5484 2](https://user-images.githubusercontent.com/1712402/196090757-239bce5f-099a-4dab-af43-f08a50b5a755.jpg)
 
