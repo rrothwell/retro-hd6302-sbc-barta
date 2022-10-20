@@ -3,13 +3,13 @@ Construction notes for a minimalist microcomputer based on the HD6303 IC.
 
 ## Introduction
 
-This board was published on [Seed Studio](https://www.seeedstudio.com/Hitachi-HD6303-Single-Board-Computer-(SBC)-g-1017489) in September 2017 by a user called Barta. The actual author is unknown (its not me) , but I'll add proper attribution when I discover it.
+This board was published on [Seed Studio](https://www.seeedstudio.com/Hitachi-HD6303-Single-Board-Computer-(SBC)-g-1017489) in September 2017, by a user called Barta. The actual author is unknown (its not me), but I'll add proper attribution when I discover it.
 
 I have reverse engineered the schematic and assembled the board. 
 
-The integrated circuit runs in multipexed address/data bus mode as a microcomputer with a full 64k of accessible memory.
-The 32K x 8 EPROM contains the Lilbug monitor program and will eventually contain a 6800 Figforth.
-The 32K x 8 RAM chip uses a skinny DIP package and its hiding under the EPROM, 
+The integrated circuit runs in multipexed address/data bus mode, as a microcomputer with a full 64k of accessible memory.
+The 32K x 8 EPROM contains the Lilbug monitor program and will eventually contain a 6800 FIG forth.
+The 32K x 8 RAM chip uses a skinny DIP package and it's hiding under the EPROM, 
 soldered directly to the PCB.
 
 The board exposes an 8-bit parallel IO port on an edge connector.
@@ -18,10 +18,10 @@ Another 3 bits (these set the mode) and some control signals are exposed on anot
 The 4.9152 MHz crystal is one of those annoying odd frequencies required to obtain a standard baudrate.
 
 A common USB to serial module is used. 
-The pinout of these modules is not stardardised so the module is connected via ribbon cable.
+The pinout of these modules is not stardardised, so the module is connected via ribbon cable.
 
 Power to the board is supplied via the edge connection through a 5V regulated wall wart.
-This is a temporary measure during construction as power during normal operation 
+This is a temporary measure during construction, as power during normal operation 
 is derived from the USB-TTL UART configured to provide 5V.
 
 ## Monitor
@@ -35,13 +35,13 @@ The manual is readily findable on the web and it includes the source code.
 For example: [Bitsavers](http://www.bitsavers.org/components/motorola/6801/MC6801RM_AD2_MC6801_Reference_Manual_May84.pdf)
 However this is a scan in the form of a PDF document and not in a form that can be assembled.
 
-An assembly listing can be found at [Vintage Chips](https://vintagechips.wordpress.com/2018/02/04/sbc6303完成間近/) in Japan 
+An assembly listing can be found at [Vintage Chips](https://vintagechips.wordpress.com/2018/02/04/sbc6303完成間近/) in Japan, 
 as part of a document package for another HD6303-based computer, the sbc6303.
 The document package is also linked to directly from [Seeed Studio](https://www.seeedstudio.com/SBC6303-g-1187477).
 
 An alternate assembly listing (not used) is found on [Github](https://github.com/tgtakaoka/LILbug).
 
-The afrementioned documetn package includes as assemler output the hex and S-record files. 
+The afrementioned document package includes as assembler output the hex and S-record files. 
 The hex file was used directly to program an EPROM.
 
 ### Initial configuration
