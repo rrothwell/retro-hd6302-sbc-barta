@@ -43,6 +43,7 @@ The micromputer to USB dongle pin association is as follows:
 | Tx                    | Rx |
 
 The monitor assembly code has been edited and reassembled (not by me) to provide 9600 baud by default, instead of the default 300 baud.
+Note that some USB dongles provide power, but not signals. Use one of the latter.
 
 On a Macintosh or other unix-like desktop computer, the terminal can be used to identify the USB dongle.
 
@@ -69,7 +70,8 @@ Issuing a Lilbug command such as
 `
 D F800 F900
 `
-Produces this result:
+
+produces this result:
 
 ![Screen Shot 2022-10-20 at 3 36 19 pm](https://user-images.githubusercontent.com/1712402/196857619-6397128e-36a6-4e02-8bd9-75d331dd4b4c.png)
 
