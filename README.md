@@ -5,7 +5,7 @@ Construction notes for a minimalist microcomputer based on the HD6303 IC.
 
 This board was published on [Seed Studio](https://www.seeedstudio.com/Hitachi-HD6303-Single-Board-Computer-(SBC)-g-1017489) in September 2017, by a user called Barta. The actual author is unknown (its not me), but I'll add proper attribution when I discover it.
 
-I have reverse engineered the schematic and assembled the board. Anyn erros are attributable to me.
+I have reverse engineered the schematic and assembled the board. Anyn errors are attributable to me.
 
 ![HD6303 Barta Schematic](https://user-images.githubusercontent.com/1712402/197113463-e3d1c76f-8cfa-4d49-b90b-6f8d5d4a8597.jpg)
 
